@@ -1,5 +1,5 @@
 # WinTile
-A windows tiling manager 
+A windows tiling manager for the 21st century!!!
 
 |Feature|Description|
 |-------|--------|
