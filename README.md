@@ -1,4 +1,5 @@
 # WinTile
+A simple CLI windows tiling manager for the 21st century.
 
 |Feature|Description|
 |-------|--------|
@@ -8,3 +9,6 @@
 
 ## Dependencies 
 ``pygetwindow``
+
+## Instructions
+``build instrutcions``
