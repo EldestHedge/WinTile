@@ -1,5 +1,6 @@
-# WinTile
-A simple CLI windows tiling manager for the 21st century.
+# <p align=center>WinTile
+
+<p align=center>A tiling manager for the 21st century.
 
 |Feature|Description|
 |-------|--------|
@@ -7,8 +8,6 @@ A simple CLI windows tiling manager for the 21st century.
 |Per Window Padding|Allow for padding (space between windows) to be added on all directions|
 |CLI Config|Configurable parameters - create config file in x86 Program Files|
 
-## Dependencies 
-``pygetwindow``
 
 ## Instructions
 ``build instrutcions``
