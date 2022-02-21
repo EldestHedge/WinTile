@@ -6,5 +6,5 @@ HEIGHT = 1080
 
 win = pygetwindow.getWindowsWithTitle("Notepad")[0]
 
-win.size = (WIDTH//2, HEIGHT)
+win.size = (WIDTH//2, HEIGHT)  # HEIGHT-35 for normal sized (bottom) taskbar padding
 win.moveTo(-7, 0)  # -7 we found to be optimal padding
