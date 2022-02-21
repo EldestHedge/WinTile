@@ -1,4 +1,5 @@
 # WinTile
+A windows tiling manager 
 
 |Feature|Description|
 |-------|--------|
