@@ -1,5 +1,5 @@
 # WinTile
-A windows tiling manager for the 21st century!!!
+A windows tiling manager for the 21st century.
 
 |Feature|Description|
 |-------|--------|
@@ -9,3 +9,6 @@ A windows tiling manager for the 21st century!!!
 
 ## Dependencies 
 ``pygetwindow``
+
+### Instructions
+``build instrutcions``
