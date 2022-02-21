@@ -10,5 +10,5 @@ A windows tiling manager for the 21st century.
 ## Dependencies 
 ``pygetwindow``
 
-### Instructions
+## Instructions
 ``build instrutcions``
