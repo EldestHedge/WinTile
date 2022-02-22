@@ -1,4 +1,5 @@
 import pygetwindow as pw
+import screeninfo as si
 
 
 """open_windows function returns a list of all open windows"""
@@ -29,6 +30,12 @@ This will be used when determing on which monitor the window exists on"""
 def which_monitor_window():
     win = pw.getWindowsWithTitle("Notepad")[0]
     return win.topleft[0]
+
+
+def monitor_list_resolution():
+    displays = si.get_monitors()
+    for display in range(len(displays)):
+        yield displays[display]
 
 
 if __name__ == "__main__":

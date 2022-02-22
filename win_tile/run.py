@@ -8,4 +8,4 @@ import functions as fn
 
 
 """Name of function to run below"""
-print(fn.open_windows())
+print(list(fn.monitor_list_resolution()))
