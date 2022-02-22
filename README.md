@@ -5,11 +5,17 @@ A tiling manager for the 21st century.
 
 ## Basic Overview
 WinTil is a tiling manager that manages your windows for you.
+<<<<<<< HEAD
 
 ![h](https://github.com/EldestHedge/WinTile/blob/main/images/stacking%20tiling%20diagram.png)
+=======
+## Stacking vs Tiling
+![h](https://github.com/EldestHedge/WinTile/blob/main/images/stack%20tile%20diagram.drawio.png)
+>>>>>>> 3923e969081e97d904f4315a2e92a045412226f3
 
-Stacking window managers allow for windows to exist behind or infront of other windows.
-Tiling window managers automatically handle position and size of open windows.
+**Stacking** window managers allow for windows to exist behind or infront of other windows.
+
+**Tiling** window managers automatically handle position and size of open windows.
 
 |Feature|Description|
 |-------|--------|
