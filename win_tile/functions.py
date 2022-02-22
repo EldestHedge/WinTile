@@ -16,23 +16,26 @@ def open_windows():
     return win_list
 
 
-def window_resize():
+def window_resize(window1, tmp):
     """window_resize resizes a window given the name of the window to any size"""
 
     WIDTH = 1920  # These are hard-coded for now; change this later
     HEIGHT = 1080  # These are hard-coded for now; change this later
 
-    win = pw.getWindowsWithTitle("Notepad")[0]
+    win = pw.getWindowsWithTitle(window1)[0]
 
-    win.size = (WIDTH//2, HEIGHT)  # HEIGHT-35 for normal sized (bottom) taskbar padding
-    win.moveTo(-7, 0)  # -7 we found to be optimal padding
+    win.size = (WIDTH//2, HEIGHT-40)  # HEIGHT-35 for normal sized (bottom) taskbar padding
+    if tmp == 0:
+        win.moveTo(0, 0)  # -7 we found to be optimal padding
+    else:
+        win.moveTo((WIDTH//2), 0)
 
 
-def which_monitor_window():
+def which_monitor_window(window):
     """which_monitor_window returns the (x,y) coordinates of where a window is.
     This will be used when determing on which monitor the window exists on"""
 
-    win = pw.getWindowsWithTitle("Notepad")[0]
+    win = pw.getWindowsWithTitle(window)[0]
 
     return win.topleft[0]
 
@@ -40,10 +43,12 @@ def which_monitor_window():
 def monitor_list_resolution():
     """monitor_list_resolution returns all monitors widths and heights as lists with matching indexes"""
     displays = si.get_monitors()
-    display_heights = [display.height for display in displays]
-    display_widths = [display.width for display in displays]
+    resolutions = []
+    for display in displays:
+        resolutions.append(display.width)
+        # resolutions.append(display.height)
 
-    return display_widths, display_heights 
+    return resolutions
 
 
 if __name__ == "__main__":
