@@ -8,4 +8,4 @@ import functions as fn
 
 
 """Name of function to run below"""
-print(list(fn.monitor_list_resolution()))
+print((fn.which_monitor_window("Untitled - Notepad")))

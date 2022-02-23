@@ -1,41 +1,33 @@
 import functions as fn
 
+"""create a list of open windows coordinates. This list will be zipped"""
+window_list = []
+for window in fn.open_windows():
+    window_list.append(fn.which_monitor_window(window))
 
-def window_location_finder():
-    # open_windows
-    # fn.monitor_list_resolution
-    value = 1920
-    for i, d in enumerate(fn.monitor_list_resolution()):
-        if value <= int(fn.monitor_list_resolution()[i]):
-            print(i)
-            break
+# create list of screen resolutions (x) called resolutions
+resolutions = fn.monitor_list_resolution()
 
 
-def temp_showcase():
-    for ind, wind in enumerate(fn.open_windows()):
-        if fn.which_monitor_window(wind) <=1920:
-            print(f"{wind} is on main")
-            fn.window_resize(wind, ind)
-    
+# create dictionary with keys of open window names and values of their coordinates
+hashed = dict(zip(fn.open_windows(), window_list))
 
-def any_monitor_location_finder():
-    for ind, wind in enumerate(fn.open_windows()):
-        if fn.which_monitor_window(wind) <=1920:
-            print(f"{wind} PRIMARY")
-        elif fn.which_monitor_window(wind) <= 1920+1920:
-            print(f"{wind} SECONDARY")
+"""Take the value (window location) and return the key (window name) for that window"""
+def name_finder(val):
+    for key, value in hashed.items():
+        if val == value:
+            return key
 
+####################################################
+"""For all open windows, determine which monitor they are on"""
 
-def sorter(wind):
-    if fn.which_monitor_window(wind) < fn.monitor_list_resolution()[0]:
-        print(f"{wind=} main")
+for val in hashed.values():
+    if val <= resolutions[0]:
+        # val is hashed's value. Now we will get the hashed's key (the window name):
+        fn.window_resize(name_finder(val))
 
-    
-def mon_test():
-    for ind, wind in enumerate(fn.open_windows()):
-        print(ind)
-        sorter(wind)
+    elif val <= resolutions[0] + resolutions[1]:
+        # val is hashed's value. Now we will get the hashed's key (the window name):
+        fn.window_resize(name_finder(val))
 
-    
-mon_test()
-# any_monitor_location_finder()
+####################################################

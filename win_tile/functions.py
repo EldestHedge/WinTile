@@ -16,7 +16,7 @@ def open_windows():
     return win_list
 
 
-def window_resize(window1, tmp):
+def window_resize(window1, offset=None):
     """window_resize resizes a window given the name of the window to any size"""
 
     WIDTH = 1920  # These are hard-coded for now; change this later
@@ -25,10 +25,7 @@ def window_resize(window1, tmp):
     win = pw.getWindowsWithTitle(window1)[0]
 
     win.size = (WIDTH//2, HEIGHT-40)  # HEIGHT-35 for normal sized (bottom) taskbar padding
-    if tmp == 0:
-        win.moveTo(0, 0)  # -7 we found to be optimal padding
-    else:
-        win.moveTo((WIDTH//2), 0)
+    win.moveTo(0, 0)  # -7 we found to be optimal padding
 
 
 def which_monitor_window(window):
