@@ -1,10 +1,11 @@
-# WinTile
+# Enwut
+
 ![](https://img.shields.io/github/license/EldestHedge/WinTile?color=green&style=flat-square) ![](https://img.shields.io/github/repo-size/EldestHedge/WinTile?color=green&style=flat-square)
 
-A tiling manager for the 21st century.
+Every nerd will use tile
 
 ## Basic Overview
-WinTil is a tiling manager that manages your windows for you.
+Enwut is a tiling manager that manages your windows.
 
 ![h](https://github.com/EldestHedge/WinTile/blob/main/images/stack%20tile%20diagram.drawio.png)
 
